@@ -35,6 +35,17 @@ export class ChatComponent implements OnInit, OnDestroy {
 
     });
 
+    this.mensajesSubscription = this.chatService.getMessagesPrivate().subscribe( msg => {
+
+      this.mensajes.push( msg );
+
+      setTimeout(() => {
+        this.elemento.scrollTop = this.elemento.scrollHeight;
+      }, 50);
+
+    });
+
+
   }
 
   ngOnDestroy() {

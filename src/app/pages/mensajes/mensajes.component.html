@@ -1,14 +1,35 @@
-<h1>Usuario: 
-  <small>{{ wsService.usuario.nombre}}</small></h1>
-<hr>
+<br>
 
-<div class="row">
-  <div class="col-6">
-    <app-lista-usuarios></app-lista-usuarios>
+<section>
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Usuario conectado:
+        <small>{{ wsService.usuario.nombre}}</small>
+      </h2>
+    </div>
+
+    <div class="col-md-4" align="right">
+      <button class="btn btn-danger" (click)="salir()">
+        Salir
+      </button>
+    </div>
   </div>
 
-  <div class="col-6">
-    <app-chat></app-chat>
-  </div>
+</section>
 
-</div>
+<hr color="green">
+
+<br>
+
+<section>
+  <div class="row">
+    <div class="col-6">
+      <app-lista-usuarios></app-lista-usuarios>
+    </div>
+
+    <div class="col-6">
+      <app-chat></app-chat>
+    </div>
+
+  </div>
+</section>
